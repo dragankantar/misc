@@ -8,9 +8,9 @@ avgs <- data.frame("columns" = colnames(data),
                    "first" = numeric(692),
                    "second" = numeric(692))
 
-for (i in seq(length(avgs)){
+for (i in seq(length(avgs))){
   avgs$first[i] <- mean(data[1:1850, i])
-  avgs$second[i] <- mean(data[1:1850, i])
+  avgs$second[i] <- mean(data[1851:2001, i])
 }
 
 
@@ -19,7 +19,7 @@ library(zoo)
 
 df <- data %>%
   select(year, ts = ts) %>%
-  mutate(ts_ma9 = rollmean(ts, k = 9, fill = NA)
+  mutate(ts_ma9 = rollmean(ts, k = 9, fill = NA),
          ts_ma26 = rollmean(ts, k = 26, fill = NA))
 
 
@@ -27,4 +27,4 @@ plot <- ggplot(aes(date, ts)) +
   geom_line(date, ts, color = "blue") +
   geom_line(date, ts_ma9, color = "red") + 
   geom_line(date, ts_ma26, color = "orange")
-  coord_cartesian(xlim = c(date("start"), date("stop")), ylim = c(0,10)
+  coord_cartesian(xlim = c(date("start"), date("stop")), ylim = c(0,10))
