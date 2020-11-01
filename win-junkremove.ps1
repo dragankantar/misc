@@ -31,8 +31,11 @@ Get-AppxPackage *getstarted* | Remove-AppxPackage
 Get-AppxPackage *feedback* | Remove-AppxPackage
 Get-AppxPackage *camera* | Remove-AppxPackage
 Get-AppxPackage *calculator* | Remove-AppxPackage
-
-
+Get-AppxPackage *mixedreality* | Remove-AppxPackage
+Get-AppxPackage *messaging* | Remove-AppxPackage
+Get-AppxPackage *gethelp* | Remove-AppxPackage
+Get-AppxPackage *OneConnect* | Remove-AppxPackage
+Get-AppxPackage *wallet* | Remove-AppxPackage
 
 
 
