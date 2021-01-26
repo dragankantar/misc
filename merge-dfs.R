@@ -1,4 +1,4 @@
-#for Loop to bind all datasets
+#for loop to merge all datasets
 
 dataframe <- read.csv("file_name (1).csv") #loading the initial file
 
