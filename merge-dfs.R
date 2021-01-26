@@ -9,6 +9,6 @@ for(i in 2:n){
   dataframe <- rbind(dataframe, dftemp)
 }
 
-write.csv(dataframe) #saving the merged dataframe as .csv
+write.csv(dataframe, file = 'dataframe.csv') #saving the merged dataframe as .csv
 
 
